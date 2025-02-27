@@ -1,0 +1,7 @@
+A script which extracts 1 or multiple tls/ssl certificates from a kubernetes cluster to PWD.
+NOTE: Will not check the TLS certificate of the connecting kubernetes cluster as of the current time.
+Switch --kubeconfig/-c <kubernetes kubeconfig file>. If not present default to ~/.kube/config
+switch --namespaces/-n -- Namespace to dump certificates in. If not present, will dump certificates of all namespaces.
+--context/-k -- The context to use in the kubeconfig file.
+--dumpdir/-d -- Dump certificates to this directory instead of PWD
+Will dump certificates in PWD in a directory with the name as the DNS to which the certificate belongs.
